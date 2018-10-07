@@ -4,8 +4,9 @@ var fs = require("fs");
 var keys = require("./keys.js");
 var request = require("request");
 var moment = require("moment");
+var Spotify = require("node-spotify-api");
 var spotify = new Spotify(keys.spotify);
-var spotify = require("node-spotify-api");
+
 
 var command = process.argv[2];
 
@@ -61,53 +62,54 @@ function band(artist) {
 
 function getSpotify (songTitle) {
 
-    // if (songTitle === "") {
-    //     songTitle = "The Sign";
-    // };
-    
+    if (songTitle === "") {
+            songTitle = "The Sign Ace of base";
+        } 
+
     
     spotify.search({ type: 'track', query: songTitle }, function(err, data) {
         if (err) {
           return console.log('Error occurred: ' + err);
         };
-      
-
-        console.log(data[i]);
-
-        // for (var i = 0; i < 5; i++) {
-
-        //     // var artist = data.tracks.items[0].artists[0].name;
-        //     // var song = data.tracks.items[0].name;
-        //     // var link = data.tracks.items[0].external_urls.spotify;
-        //     // var album = data.tracks.items[0].album.name;
         
-        //       console.log([i]);
+        for (var i = 0; i < 5; i++) {
 
-
-        // }
+            var artist = data.tracks.items[i].artists[0].name;
+            var song = data.tracks.items[i].name;
+            var link = data.tracks.items[i].external_urls.spotify;
+            var album = data.tracks.items[i].album.name;
         
-    
+            console.log(JSON.parse([i]));
+            console.log("Artist: " + artist);
+            console.log("Song Name: " + song);
+            console.log("Preview Song: " + link);
+            console.log("Album: " + album + "\n");
+            console.log("-----------------------------" + "\n");
+        }
     
     });
-
-
-    
-
-
 }
 
-// fs.readFile("random.txt", "utf8", function(error, data) {
-// 	//declare a variable, split the text in data by ",", store it as an array
-	
-// 	// concert-this,lil xan
-// 	//  ↑ 0th        ↑1st
-	
-// 	// var media = the 1st index
-	
-// 	// if (the 0th index == spotify / movie/ concert) { 
-// 	// do the things according to the if condition
-// 	// }
-// }
+function doWhatItSays() {
+    fs.readFile("random.txt", "utf8", function (error, data) {
+        if (error) {
+            return console.log(error);
+        }
+        var dataArray = data.split(",");
+        console.log(dataArray);
+        var initialCommand = dataArray[0];
+        var inputData = dataArray[1];
+        
+        if (initialCommand === "movie-this") {
+            movie(inputData);
+        } else if (initialCommand === "concert-this") {
+            band(inputData);
+        } else if (initialCommand === "spotify-this-song") {
+            getSpotify(inputData);
+        }
+    });
+}
+
 
 if (command === "movie-this") {
     movie(input);
@@ -119,7 +121,7 @@ if (command === "movie-this") {
     getSpotify(input);
 
 } else if (command === "do-what-it-says") {
-
-
+    doWhatItSays()
+    
 }
 
