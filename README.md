@@ -23,9 +23,9 @@ Command to access the OMDB API by inputing a Movie title:
 
 * `movie-this`
 
-![movie-this blank](/images/spotify-this-songblank.png)
+![movie-this blank](/images/movie-thisblank.png)
 
-![movie-this title](/images/spotify-this-songtitle.png)
+![movie-this title](/images/movie-thistitle.png)
 
 This command is different from the previous. After inputing this command, the terminal then reads what is in the random.txt file and initiates the action based on the command that is printed and what arguement it takes. The command can be any of the previous in order to work.
 
