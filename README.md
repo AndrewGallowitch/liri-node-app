@@ -1,7 +1,7 @@
 # liri-node-app
 ## Functionality
 
-**This repository is a working example of Node.js 
+**This repository is a working example of Node.js** 
 
 Using the below commands, You are able to access information from API's such as OMDB, Bands In Town API, and Node Spotify API. It also shows the use of the npm package fs.readFile().
 
