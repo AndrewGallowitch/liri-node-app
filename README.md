@@ -2,7 +2,7 @@
 # Functionality
 This repository is a working example of Node.js
 
-Using the below commands, You are able to access information from API's such as OMDB, Bands In Town API, and Node Spotify API. It also shows the use of of the npm package fs.readFile().
+Using the below commands, You are able to access information from API's such as OMDB, Bands In Town API, and Node Spotify API. It also shows the use of the npm package fs.readFile().
 
 
 Command to acces the bands in town API by inputing an artist name:
@@ -24,4 +24,7 @@ This command is different from the previous. After inputing this command, the te
 Command:
 
 * `do-what-it-says`
+<<<<<<< HEAD
 ![do-what-it-says title](/images/do-what-it-says.png)
+=======
+>>>>>>> e7ebce2b708077abc84c787d34247b6206a8c570
