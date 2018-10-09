@@ -9,15 +9,15 @@ Command to acces the bands in town API by inputing an artist name:
 
 * `concert-this`
 
-![concert images](/images/concert-this title.png)
+![concert images](/images/concert-thistitle.png)
 
 Command to access the node-spotify-api package by inputing a song title:
 
 * `spotify-this-song`
 
-![spotify this song blank](/images/spotify-this-song blank.png)
+![spotify this song blank](/images/spotify-this-songblank.png)
 
-![spotify this song title](/images/spotify-this-song title.png)
+![spotify this song title](/images/spotify-this-songtitle.png)
 
 Command to access the OMDB API by inputing a Movie title:
 
