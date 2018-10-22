@@ -1,4 +1,5 @@
-# liri-node-app
+# liri Node.js app
+
 ## Functionality
 
 **This repository is a working example of Node.js** 
